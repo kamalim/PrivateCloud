@@ -57,7 +57,7 @@ CONFIG_NAGIOS_INSTALL=y
 # case you are running Packstack the second time with the same answer
 # file and don't want Packstack to touch these servers. Leave plain if
 # you don't need to exclude any server.
-EXCLUDE_SERVERS=10.4.200.34
+EXCLUDE_SERVERS=
 
 # The IP address of the server on which to install MySQL
 CONFIG_MYSQL_HOST=10.4.200.34
@@ -270,7 +270,7 @@ CONFIG_NEUTRON_METADATA_PW=47ee676649384a61
 
 # The type of network to allocate for tenant networks (eg. vlan,
 # local, gre)
-CONFIG_NEUTRON_LB_TENANT_NETWORK_TYPE=local
+CONFIG_NEUTRON_LB_TENANT_NETWORK_TYPE=vlan
 
 # A comma separated list of VLAN ranges for the Neutron linuxbridge
 # plugin (eg. physnet1:1:4094,physnet2,physnet3:3000:3999)
@@ -283,7 +283,7 @@ CONFIG_NEUTRON_LB_INTERFACE_MAPPINGS=
 
 # Type of network to allocate for tenant networks (eg. vlan, local,
 # gre)
-CONFIG_NEUTRON_OVS_TENANT_NETWORK_TYPE=local
+CONFIG_NEUTRON_OVS_TENANT_NETWORK_TYPE=vlan
 
 # A comma separated list of VLAN ranges for the Neutron openvswitch
 # plugin (eg. physnet1:1:4094,physnet2,physnet3:3000:3999)

@@ -1,0 +1,40 @@
+We all know how important it is to have automated environment in your project.In our regular work we speak about automated build and deployment in enterprises, very less is spoken about or given important to the initial setup - provisioning the virtual environments.Automated provisioning of environment on demand is equally important as is automated build and deployment.It is the entire work flow - Auromated Environment on Demand => Config Management => Automated Build and Deployment (CI)
+
+As part of an inhouse initiative in Bangalore office , we started building a POC of Environment on Demand using Openstack .The technical stack we used are :
+
+Hardware :
+
+5 out-of-warranty Dell 6510 - each with 8 GB ram and 250 GB diskspace
+
+Software:
+
+1.Windows Server 2008 R2 - Vcenter Server
+2.Vmware Exsi 5.5 - Vmware Hosts (2)
+3.Centos 6.5 - KVM Server
+4.Centos 6.5 + Openstack RDO (Redhat Openstack) - Openstack server
+
+Using the above infrastructure we had setup an openstack automated environment with Vmware and KVM as the hypervisors.Below diagram will explain the entire setup:
+
+<<Diagram>>
+
+Some openstack details:
+We used redhat openstack , packstack for the openstack setup.The reason behind using RDO is that it serves our purpose of supporting most enterprises .We used openstack nova compute to setup instances on multiple hypervisors.In this case:
+1.KVM
+2.Vmware
+
+Openstack neutron as the network engines.Currently it supports Flat dhcp network ,  work is in progress for VLAN and GRE network sas well.Openstack Glance was used fro builing images for kvm (qcow) and vmware (vmdk).
+
+This Demo will talk more about it.<<Demo Link>>
+
+
+
+The configurations are currently checked in to github.The is a lot refactoring that has to go in it, but we are just starting :)
+
+The Team  :
+1.Sri Ram Narayanan
+2.Venu Murthy
+3.Kamalika Majumder
+
+To be continued ........
+
+
